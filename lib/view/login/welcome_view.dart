@@ -23,11 +23,22 @@ class _WelcomeViewState extends State<WelcomeView> {
                   width: media.width),
               Image.asset(
                 'assets/images/app_logo.png',
-                width: media.width * 0.36,
-                height: media.height * 0.36,
+                width: media.width * 0.35,
+                height: media.height * 0.35,
                 fit: BoxFit.contain,
               ),
             ],
+          ),
+          SizedBox(
+            height: media.width * 0.01,
+          ),
+          Text(
+            'Discover the best foods from over 1,000\nrestaurants and fast delivery to your\ndoorstep',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: TColor.secondaryText,
+                fontSize: 13,
+                fontWeight: FontWeight.w500),
           ),
           SizedBox(
             height: media.width * 0.1,
@@ -39,8 +50,8 @@ class _WelcomeViewState extends State<WelcomeView> {
               onPressed: () {},
             ),
           ),
-          SizedBox(
-            height: media.width * 0.1,
+          const SizedBox(
+            height: 20,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
