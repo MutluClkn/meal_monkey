@@ -12,17 +12,21 @@ class _StartupViewState extends State<StartupView> {
   @override
   void initState() {
     super.initState();
+    goWelcomePageWithDuration();
+  }
+
+  void goWelcomePageWithDuration() async {
+    await Future.delayed(const Duration(seconds: 2));
     goWelcomePage();
   }
 
-  void goWelcomePage() async {
-    await Future.delayed(const Duration(seconds: 2));
-    welcomePage();
-  }
-
-  void welcomePage() {
+  void goWelcomePage() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const WelcomeView()));
+      context,
+      MaterialPageRoute(
+        builder: (context) => const WelcomeView(),
+      ),
+    );
   }
 
   @override
