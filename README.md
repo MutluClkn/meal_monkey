@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ## App
 
-<img src="https://github.com/MutluClkn/meal_monkey/blob/main/Documents/startup.png " width="222"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/Documents/welcome.png " width="222"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/Documents/login.png " width="222">
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/startup.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/welcome.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/login.png " width="222" height="430">
