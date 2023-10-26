@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
 import 'package:meal_monkey/view/login/login_view.dart';
+import 'package:meal_monkey/view/login/otp_view.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
@@ -101,7 +102,16 @@ class _SignUpViewState extends State<SignUpView> {
               ),
               RoundButton(
                 title: 'Sign Up',
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const OTPView(),
+                      ),
+                    );
+                  });
+                },
               ),
               const SizedBox(
                 height: 30,

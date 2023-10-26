@@ -41,7 +41,7 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
                 height: 15,
               ),
               Text(
-                'Please enter your email to receive a\nlink to create a new password via email',
+                'Please enter your email to receive a link to create a new password via email',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: TColor.secondaryText,
