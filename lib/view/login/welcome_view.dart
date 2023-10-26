@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/view/login/login_view.dart';
+import 'package:meal_monkey/view/login/sign_up_view.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({super.key});
@@ -71,7 +72,16 @@ class _WelcomeViewState extends State<WelcomeView> {
               child: RoundButton(
                 title: 'Create an Account',
                 type: RoundButtonType.textPrimary,
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpView(),
+                      ),
+                    );
+                  });
+                },
               ),
             ),
             const SizedBox(

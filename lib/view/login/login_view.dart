@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/common_widget/round_icon_button.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
+import 'package:meal_monkey/view/login/sign_up_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -37,7 +38,7 @@ class _LoginViewState extends State<LoginView> {
                 FontWeight.w800,
               ),
               _text(
-                'Add your details to login.',
+                'Add your details to login',
                 TColor.secondaryText,
                 14,
                 FontWeight.w500,
@@ -51,7 +52,7 @@ class _LoginViewState extends State<LoginView> {
                 keyboardType: TextInputType.emailAddress,
               ),
               const SizedBox(
-                height: 20,
+                height: 25,
               ),
               RoundTextField(
                 hintText: 'Password',
@@ -110,7 +111,16 @@ class _LoginViewState extends State<LoginView> {
                 height: 50,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpView(),
+                      ),
+                    );
+                  });
+                },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
