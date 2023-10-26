@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/common_widget/round_icon_button.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
+import 'package:meal_monkey/view/login/reset_password_view.dart';
 import 'package:meal_monkey/view/login/sign_up_view.dart';
 
 class LoginView extends StatefulWidget {
@@ -67,13 +68,22 @@ class _LoginViewState extends State<LoginView> {
                 onPressed: () {},
               ),
               const SizedBox(
-                height: 5,
+                height: 8,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ResetPasswordView(),
+                      ),
+                    );
+                  });
+                },
                 child: _text(
                   'Forgot you password?',
-                  TColor.secondaryText,
+                  TColor.primary,
                   14,
                   FontWeight.w500,
                 ),

@@ -23,4 +23,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ### Login and Sign Up
 
-<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/login.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/signup.png " width="222" height="430">
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/login.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/signup.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/resetpassword.png " width="222" height="430">
