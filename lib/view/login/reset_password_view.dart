@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
 import 'package:meal_monkey/view/login/login_view.dart';
+import 'package:meal_monkey/view/login/new_password_view.dart';
 
 class ResetPasswordView extends StatefulWidget {
   const ResetPasswordView({super.key});
@@ -48,7 +49,7 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
                     fontWeight: FontWeight.w500),
               ),
               const SizedBox(
-                height: 55,
+                height: 50,
               ),
               RoundTextField(
                 hintText: 'Email',
@@ -60,7 +61,16 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
               ),
               RoundButton(
                 title: 'Send',
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NewPasswordView(),
+                      ),
+                    );
+                  });
+                },
               ),
               const SizedBox(
                 height: 15,
