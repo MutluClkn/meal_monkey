@@ -37,13 +37,16 @@ class _WelcomeViewState extends State<WelcomeView> {
             SizedBox(
               height: media.width * 0.01,
             ),
-            Text(
-              'Discover the best foods from over 1,000\nrestaurants and fast delivery to your\ndoorstep',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: TColor.secondaryText,
-                  fontSize: 13,
-                  fontWeight: FontWeight.w500),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Text(
+                'Discover the best foods from over 1,000 restaurants and fast delivery to your doorstep',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: TColor.secondaryText,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w500),
+              ),
             ),
             SizedBox(
               height: media.width * 0.1,

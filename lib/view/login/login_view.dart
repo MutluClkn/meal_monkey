@@ -5,6 +5,7 @@ import 'package:meal_monkey/common_widget/round_icon_button.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
 import 'package:meal_monkey/view/login/reset_password_view.dart';
 import 'package:meal_monkey/view/login/sign_up_view.dart';
+import 'package:meal_monkey/view/on_boarding/on_boarding_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -65,7 +66,14 @@ class _LoginViewState extends State<LoginView> {
               ),
               RoundButton(
                 title: 'Login',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const OnBoardingView(),
+                    ),
+                  );
+                },
               ),
               const SizedBox(
                 height: 8,
