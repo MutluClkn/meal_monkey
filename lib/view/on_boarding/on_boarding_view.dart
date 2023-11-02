@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
+import 'package:meal_monkey/view/main_tabview/main_tab_view.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -139,7 +140,12 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   title: 'Next',
                   onPressed: () {
                     if (selectPage >= 2) {
-                      print('GO HOME SCREEN');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MainTabView(),
+                        ),
+                      );
                     } else {
                       setState(
                         () {
