@@ -52,7 +52,7 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
                 height: 50,
               ),
               RoundTextField(
-                hintText: 'Email',
+                placeHolder: 'Email',
                 controller: emailText,
                 keyboardType: TextInputType.emailAddress,
               ),

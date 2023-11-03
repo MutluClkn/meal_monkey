@@ -55,14 +55,14 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 25,
               ),
               RoundTextField(
-                hintText: 'Name',
+                placeHolder: 'Name',
                 controller: nameText,
               ),
               const SizedBox(
                 height: 25,
               ),
               RoundTextField(
-                hintText: 'Email',
+                placeHolder: 'Email',
                 controller: emailText,
                 keyboardType: TextInputType.emailAddress,
               ),
@@ -70,7 +70,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 25,
               ),
               RoundTextField(
-                hintText: 'Mobile No',
+                placeHolder: 'Mobile No',
                 controller: mobileNoText,
                 keyboardType: TextInputType.phone,
               ),
@@ -78,14 +78,14 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 25,
               ),
               RoundTextField(
-                hintText: 'Address',
+                placeHolder: 'Address',
                 controller: addressText,
               ),
               const SizedBox(
                 height: 25,
               ),
               RoundTextField(
-                hintText: 'Password',
+                placeHolder: 'Password',
                 controller: passwordText,
                 obscureText: true,
               ),
@@ -93,7 +93,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 25,
               ),
               RoundTextField(
-                hintText: 'Confirm Password',
+                placeHolder: 'Confirm Password',
                 controller: confirmPasswordText,
                 obscureText: true,
               ),
