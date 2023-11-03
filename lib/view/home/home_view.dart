@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/category_cell.dart';
 import 'package:meal_monkey/common_widget/most_popular_cell.dart';
-import 'package:meal_monkey/common_widget/recent_menu_cell.dart';
+import 'package:meal_monkey/common_widget/popular_restaurants_row.dart';
+import 'package:meal_monkey/common_widget/recent_restaurants_row.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
 import 'package:meal_monkey/common_widget/view_all_title_row.dart';
 
@@ -223,6 +224,19 @@ class _HomeViewState extends State<HomeView> {
                   onView: () {},
                 ),
               ),
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                padding: EdgeInsets.zero,
+                itemCount: popularArr.length,
+                itemBuilder: ((context, index) {
+                  var pObj = popularArr[index] as Map? ?? {};
+                  return PopularRestaurantsRow(
+                    pObj: pObj,
+                    onTap: () {},
+                  );
+                }),
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ViewAllTitleRow(
@@ -259,7 +273,7 @@ class _HomeViewState extends State<HomeView> {
                 itemCount: recentArr.length,
                 itemBuilder: ((context, index) {
                   var rObj = recentArr[index] as Map? ?? {};
-                  return RecentMenuCell(
+                  return RecentRestaurantsRow(
                     rObj: rObj,
                     onTap: () {},
                   );

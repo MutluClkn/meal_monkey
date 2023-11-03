@@ -28,3 +28,7 @@ samples, guidance on mobile development, and a full API reference.
 ### Onboarding
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/onboarding1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/onboarding2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/onboarding3.png " width="222" height="430">
+
+### Home Screen
+
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/home1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/home2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/home3.png " width="222" height="430">

@@ -66,14 +66,17 @@ class MostPopularCell extends StatelessWidget {
                     fontSize: 12,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 2),
-                  child: Image.asset(
-                    'assets/images/rate.png',
-                    width: 10,
-                    height: 10,
-                    fit: BoxFit.cover,
-                  ),
+                const SizedBox(
+                  width: 8,
+                ),
+                Image.asset(
+                  'assets/images/rate.png',
+                  width: 10,
+                  height: 10,
+                  fit: BoxFit.cover,
+                ),
+                const SizedBox(
+                  width: 4,
                 ),
                 Text(
                   mObj['rate'],
