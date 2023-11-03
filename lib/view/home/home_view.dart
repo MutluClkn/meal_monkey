@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
+import 'package:meal_monkey/common_widget/category_cell.dart';
+import 'package:meal_monkey/common_widget/most_popular_cell.dart';
+import 'package:meal_monkey/common_widget/recent_menu_cell.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
+import 'package:meal_monkey/common_widget/view_all_title_row.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -25,7 +29,7 @@ class _HomeViewState extends State<HomeView> {
       'rate': '4.9',
       'rating': '124',
       'type': 'Cafe',
-      'location': 'Western Food',
+      'food_type': 'Western Food',
     },
     {
       'image': 'assets/images/res_2.png',
@@ -33,7 +37,7 @@ class _HomeViewState extends State<HomeView> {
       'rate': '4.9',
       'rating': '124',
       'type': 'Cafe',
-      'location': 'Western Food',
+      'food_type': 'Western Food',
     },
     {
       'image': 'assets/images/res_3.png',
@@ -41,7 +45,7 @@ class _HomeViewState extends State<HomeView> {
       'rate': '4.9',
       'rating': '124',
       'type': 'Cafe',
-      'location': 'Western Food',
+      'food_type': 'Western Food',
     },
   ];
   List mostPopularArr = [
@@ -51,7 +55,7 @@ class _HomeViewState extends State<HomeView> {
       'rate': '4.9',
       'rating': '124',
       'type': 'Cafe',
-      'location': 'Western Food',
+      'food_type': 'Western Food',
     },
     {
       'image': 'assets/images/m_res_2.png',
@@ -59,7 +63,7 @@ class _HomeViewState extends State<HomeView> {
       'rate': '4.9',
       'rating': '124',
       'type': 'Cafe',
-      'location': 'Western Food',
+      'food_type': 'Western Food',
     },
   ];
   List recentArr = [
@@ -69,7 +73,7 @@ class _HomeViewState extends State<HomeView> {
       'rate': '4.9',
       'rating': '124',
       'type': 'Cafe',
-      'location': 'Western Food',
+      'food_type': 'Western Food',
     },
     {
       'image': 'assets/images/item_2.png',
@@ -77,7 +81,7 @@ class _HomeViewState extends State<HomeView> {
       'rate': '4.9',
       'rating': '124',
       'type': 'Cafe',
-      'location': 'Western Food',
+      'food_type': 'Western Food',
     },
     {
       'image': 'assets/images/item_3.png',
@@ -85,7 +89,7 @@ class _HomeViewState extends State<HomeView> {
       'rate': '4.9',
       'rating': '124',
       'type': 'Cafe',
-      'location': 'Western Food',
+      'food_type': 'Western Food',
     },
   ];
 
@@ -193,6 +197,73 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  itemCount: categoryArr.length,
+                  itemBuilder: ((context, index) {
+                    var cObj = categoryArr[index] as Map? ?? {};
+                    return CategoryCell(
+                      cObj: cObj,
+                      onTap: () {},
+                    );
+                  }),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ViewAllTitleRow(
+                  title: 'Popular Restaurants',
+                  onView: () {},
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ViewAllTitleRow(
+                  title: 'Most Popular',
+                  onView: () {},
+                ),
+              ),
+              SizedBox(
+                height: 200,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  itemCount: mostPopularArr.length,
+                  itemBuilder: ((context, index) {
+                    var mObj = mostPopularArr[index] as Map? ?? {};
+                    return MostPopularCell(
+                      mObj: mObj,
+                      onTap: () {},
+                    );
+                  }),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ViewAllTitleRow(
+                  title: 'Recent',
+                  onView: () {},
+                ),
+              ),
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                itemCount: recentArr.length,
+                itemBuilder: ((context, index) {
+                  var rObj = recentArr[index] as Map? ?? {};
+                  return RecentMenuCell(
+                    rObj: rObj,
+                    onTap: () {},
+                  );
+                }),
               ),
             ],
           ),
