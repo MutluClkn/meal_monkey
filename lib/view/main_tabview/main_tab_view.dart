@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/tab_button.dart';
 import 'package:meal_monkey/view/home/home_view.dart';
+import 'package:meal_monkey/view/menu/menu_view.dart';
 
 class MainTabView extends StatefulWidget {
   const MainTabView({super.key});
@@ -21,8 +22,8 @@ class _MainTabViewState extends State<MainTabView> {
       floatingActionButtonLocation:
           FloatingActionButtonLocation.miniCenterDocked,
       floatingActionButton: SizedBox(
-        width: 60,
-        height: 60,
+        width: 75,
+        height: 75,
         child: FloatingActionButton(
           onPressed: () {
             if (selectedTab != 2) {
@@ -47,7 +48,7 @@ class _MainTabViewState extends State<MainTabView> {
           surfaceTintColor: TColor.white,
           shadowColor: Colors.black,
           elevation: 1,
-          notchMargin: 12,
+          notchMargin: 18,
           height: 64,
           shape: const CircularNotchedRectangle(),
           child: SafeArea(
@@ -61,7 +62,7 @@ class _MainTabViewState extends State<MainTabView> {
                   onTap: () {
                     if (selectedTab != 0) {
                       selectedTab = 0;
-                      selectPageView = Container();
+                      selectPageView = const MenuView();
                     }
                     if (mounted) {
                       setState(() {});
