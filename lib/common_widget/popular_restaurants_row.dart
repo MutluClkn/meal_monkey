@@ -64,7 +64,7 @@ class PopularRestaurantsRow extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        width: 8,
+                        width: 5,
                       ),
                       Text(
                         '(${pObj['rating']} Ratings)',
@@ -75,7 +75,7 @@ class PopularRestaurantsRow extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 8,
+                        width: 4,
                       ),
                       Text(
                         pObj['type'],
@@ -85,13 +85,19 @@ class PopularRestaurantsRow extends StatelessWidget {
                           fontSize: 11,
                         ),
                       ),
+                      const SizedBox(
+                        width: 5,
+                      ),
                       Text(
-                        ',',
+                        '.',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: TColor.primary,
                           fontSize: 11,
                         ),
+                      ),
+                      const SizedBox(
+                        width: 5,
                       ),
                       Text(
                         pObj['food_type'],

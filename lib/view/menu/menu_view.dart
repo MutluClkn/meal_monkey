@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
+import 'package:meal_monkey/view/menu/menu_item_view.dart';
 
 class MenuView extends StatefulWidget {
   const MenuView({super.key});
@@ -71,7 +72,7 @@ class _MenuViewState extends State<MenuView> {
                           'Menu',
                           style: TextStyle(
                             color: TColor.primaryText,
-                            fontSize: 20,
+                            fontSize: 23,
                             fontWeight: FontWeight.w800,
                           ),
                         ),
@@ -118,95 +119,107 @@ class _MenuViewState extends State<MenuView> {
                     shrinkWrap: true,
                     itemBuilder: ((context, index) {
                       var menuObj = menuArr[index] as Map? ?? {};
-                      return Stack(
-                        alignment: Alignment.centerRight,
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(
-                              top: 8,
-                              bottom: 8,
-                              right: 20,
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  MenuItemView(menuItemObj: menuObj),
                             ),
-                            width: media.width - 100,
-                            height: 90,
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(35),
-                                  bottomLeft: Radius.circular(35),
-                                  topRight: Radius.circular(10),
-                                  bottomRight: Radius.circular(10)),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 7,
-                                  offset: Offset(0, 4),
+                          );
+                        },
+                        child: Stack(
+                          alignment: Alignment.centerRight,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.only(
+                                top: 8,
+                                bottom: 8,
+                                right: 20,
+                              ),
+                              width: media.width - 100,
+                              height: 90,
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(35),
+                                    bottomLeft: Radius.circular(35),
+                                    topRight: Radius.circular(10),
+                                    bottomRight: Radius.circular(10)),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 7,
+                                    offset: Offset(0, 4),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  menuObj['image'].toString(),
+                                  width: 80,
+                                  height: 80,
+                                  fit: BoxFit.contain,
+                                ),
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        menuObj['name'].toString(),
+                                        style: TextStyle(
+                                          color: TColor.primaryText,
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
+                                      ),
+                                      Text(
+                                        '${menuObj['count'].toString()} items',
+                                        style: TextStyle(
+                                          color: TColor.secondaryText,
+                                          fontSize: 11,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 35,
+                                  height: 35,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(17.5),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        color: Colors.black12,
+                                        blurRadius: 4,
+                                        offset: Offset(0, 2),
+                                      ),
+                                    ],
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Image.asset(
+                                    'assets/images/btn_next.png',
+                                    width: 15,
+                                    height: 15,
+                                  ),
                                 ),
                               ],
                             ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                menuObj['image'].toString(),
-                                width: 80,
-                                height: 80,
-                                fit: BoxFit.contain,
-                              ),
-                              const SizedBox(
-                                width: 15,
-                              ),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      menuObj['name'].toString(),
-                                      style: TextStyle(
-                                        color: TColor.primaryText,
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 4,
-                                    ),
-                                    Text(
-                                      '${menuObj['count'].toString()} items',
-                                      style: TextStyle(
-                                        color: TColor.secondaryText,
-                                        fontSize: 11,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 35,
-                                height: 35,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(17.5),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      color: Colors.black12,
-                                      blurRadius: 4,
-                                      offset: Offset(0, 2),
-                                    ),
-                                  ],
-                                ),
-                                alignment: Alignment.center,
-                                child: Image.asset(
-                                  'assets/images/btn_next.png',
-                                  width: 15,
-                                  height: 15,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
+                          ],
+                        ),
                       );
                     }),
                   ),

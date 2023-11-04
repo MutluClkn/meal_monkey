@@ -29,7 +29,7 @@ class _HomeViewState extends State<HomeView> {
       'name': 'Minute by tuk tuk',
       'rate': '4.9',
       'rating': '124',
-      'type': 'Cafe',
+      'type': 'Café',
       'food_type': 'Western Food',
     },
     {
@@ -37,7 +37,7 @@ class _HomeViewState extends State<HomeView> {
       'name': 'Café de Noir',
       'rate': '4.9',
       'rating': '124',
-      'type': 'Cafe',
+      'type': 'Café',
       'food_type': 'Western Food',
     },
     {
@@ -45,7 +45,7 @@ class _HomeViewState extends State<HomeView> {
       'name': 'Bakes by Tella',
       'rate': '4.9',
       'rating': '124',
-      'type': 'Cafe',
+      'type': 'Café',
       'food_type': 'Western Food',
     },
   ];
@@ -55,7 +55,7 @@ class _HomeViewState extends State<HomeView> {
       'name': 'Minute by tuk tuk',
       'rate': '4.9',
       'rating': '124',
-      'type': 'Cafe',
+      'type': 'Café',
       'food_type': 'Western Food',
     },
     {
@@ -63,7 +63,7 @@ class _HomeViewState extends State<HomeView> {
       'name': 'Café de Noir',
       'rate': '4.9',
       'rating': '124',
-      'type': 'Cafe',
+      'type': 'Café',
       'food_type': 'Western Food',
     },
   ];
@@ -73,7 +73,7 @@ class _HomeViewState extends State<HomeView> {
       'name': 'Mulberry Pizza by Josh',
       'rate': '4.9',
       'rating': '124',
-      'type': 'Cafe',
+      'type': 'Café',
       'food_type': 'Western Food',
     },
     {
@@ -81,7 +81,7 @@ class _HomeViewState extends State<HomeView> {
       'name': 'Barita',
       'rate': '4.9',
       'rating': '124',
-      'type': 'Cafe',
+      'type': 'Café',
       'food_type': 'Western Food',
     },
     {
@@ -89,7 +89,7 @@ class _HomeViewState extends State<HomeView> {
       'name': 'Pizza Rush Hour',
       'rate': '4.9',
       'rating': '124',
-      'type': 'Cafe',
+      'type': 'Café',
       'food_type': 'Western Food',
     },
   ];
