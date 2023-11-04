@@ -17,87 +17,79 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 25,
-            vertical: 20,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 64,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(
-                height: 64,
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Image.asset(
+              'assets/images/btn_back.png',
+              width: 20,
+              height: 20,
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 25,
+                vertical: 20,
               ),
-              Text(
-                'Reset Password',
-                style: TextStyle(
-                  color: TColor.primaryText,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Text(
-                'Please enter your email to receive a link to create a new password via email',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: TColor.secondaryText,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500),
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              RoundTextField(
-                placeHolder: 'Email',
-                controller: emailText,
-                keyboardType: TextInputType.emailAddress,
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              RoundButton(
-                title: 'Send',
-                onPressed: () {
-                  setState(() {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const NewPasswordView(),
-                      ),
-                    );
-                  });
-                },
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              TextButton(
-                onPressed: () {
-                  setState(() {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LoginView(),
-                      ),
-                    );
-                  });
-                },
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                    color: TColor.primary,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Reset Password',
+                    style: TextStyle(
+                      color: TColor.primaryText,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
-                ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    'Please enter your email to receive a link to create a new password via email',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: TColor.secondaryText,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  RoundTextField(
+                    placeHolder: 'Email',
+                    controller: emailText,
+                    keyboardType: TextInputType.emailAddress,
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  RoundButton(
+                    title: 'Send',
+                    onPressed: () {
+                      setState(() {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NewPasswordView(),
+                          ),
+                        );
+                      });
+                    },
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

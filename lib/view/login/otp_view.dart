@@ -15,161 +15,179 @@ class _OtpViewState extends State<OTPView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(
-                height: 64,
-              ),
-              Text(
-                'We have sent an OTP to your Mobile',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: TColor.primaryText,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Text(
-                'Please check your mobile number 054******12 continue to reset your password',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: TColor.secondaryText,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const SizedBox(
-                height: 60,
-              ),
-              SizedBox(
-                height: 60,
-                child: OtpPinField(
-                    key: _otpPinFieldController,
-                    autoFillEnable: false,
-
-                    ///for Ios it is not needed as the SMS autofill is provided by default, but not for Android, that's where this key is useful.
-                    textInputAction: TextInputAction.done,
-
-                    ///in case you want to change the action of keyboard
-                    /// to clear the Otp pin Controller
-                    onSubmit: (text) {
-                      FocusScope.of(context).requestFocus(FocusNode());
-
-                      /// return the entered pin
-                    },
-                    onChange: (text) {
-                      print('Enter on change pin is $text');
-
-                      /// return the entered pin
-                    },
-                    onCodeChanged: (code) {
-                      print('onCodeChanged  is $code');
-                    },
-
-                    /// to decorate your Otp_Pin_Field
-                    otpPinFieldStyle: OtpPinFieldStyle(
-                      /// border color for inactive/unfocused Otp_Pin_Field
-                      defaultFieldBorderColor: Colors.transparent,
-
-                      /// border color for active/focused Otp_Pin_Field
-                      activeFieldBorderColor: Colors.transparent,
-
-                      /// Background Color for inactive/unfocused Otp_Pin_Field
-                      defaultFieldBackgroundColor: TColor.textfield,
-
-                      /// Background Color for active/focused Otp_Pin_Field
-                      activeFieldBackgroundColor: TColor.textfield,
-
-                      /// Background Color for filled field pin box
-                      filledFieldBackgroundColor: TColor.textfield,
-
-                      /// border Color for filled field pin box
-                      filledFieldBorderColor: Colors.transparent,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 64,
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Image.asset(
+              'assets/images/btn_back.png',
+              width: 20,
+              height: 20,
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'We have sent an OTP to your Mobile',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: TColor.primaryText,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w800,
                     ),
-                    maxLength: 4,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    'Please check your mobile number 054******12 continue to reset your password',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: TColor.secondaryText,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 60,
+                  ),
+                  SizedBox(
+                    height: 60,
+                    child: OtpPinField(
+                        key: _otpPinFieldController,
+                        autoFillEnable: false,
 
-                    /// no of pin field
-                    showCursor: true,
+                        ///for Ios it is not needed as the SMS autofill is provided by default, but not for Android, that's where this key is useful.
+                        textInputAction: TextInputAction.done,
 
-                    /// bool to show cursor in pin field or not
-                    cursorColor: Colors.indigo,
+                        ///in case you want to change the action of keyboard
+                        /// to clear the Otp pin Controller
+                        onSubmit: (text) {
+                          FocusScope.of(context).requestFocus(FocusNode());
 
-                    /// to choose cursor color
-                    upperChild: const Column(
+                          /// return the entered pin
+                        },
+                        onChange: (text) {
+                          print('Enter on change pin is $text');
+
+                          /// return the entered pin
+                        },
+                        onCodeChanged: (code) {
+                          print('onCodeChanged  is $code');
+                        },
+
+                        /// to decorate your Otp_Pin_Field
+                        otpPinFieldStyle: OtpPinFieldStyle(
+                          /// border color for inactive/unfocused Otp_Pin_Field
+                          defaultFieldBorderColor: Colors.transparent,
+
+                          /// border color for active/focused Otp_Pin_Field
+                          activeFieldBorderColor: Colors.transparent,
+
+                          /// Background Color for inactive/unfocused Otp_Pin_Field
+                          defaultFieldBackgroundColor: TColor.textfield,
+
+                          /// Background Color for active/focused Otp_Pin_Field
+                          activeFieldBackgroundColor: TColor.textfield,
+
+                          /// Background Color for filled field pin box
+                          filledFieldBackgroundColor: TColor.textfield,
+
+                          /// border Color for filled field pin box
+                          filledFieldBorderColor: Colors.transparent,
+                        ),
+                        maxLength: 4,
+
+                        /// no of pin field
+                        showCursor: true,
+
+                        /// bool to show cursor in pin field or not
+                        cursorColor: Colors.indigo,
+
+                        /// to choose cursor color
+                        upperChild: const Column(
+                          children: [
+                            SizedBox(height: 30),
+                            Icon(Icons.flutter_dash_outlined, size: 150),
+                            SizedBox(height: 20),
+                          ],
+                        ),
+                        showCustomKeyboard: false,
+
+                        ///bool which manage to show custom keyboard
+                        // customKeyboard: Container(),
+                        /// Widget which help you to show your own custom keyboard in place if default custom keyboard
+                        showDefaultKeyboard: true,
+
+                        ///bool which manage to show default OS keyboard
+                        cursorWidth: 3,
+
+                        /// to select cursor width
+                        mainAxisAlignment: MainAxisAlignment.center,
+
+                        /// place otp pin field according to yourself
+
+                        /// predefine decorate of pinField use  OtpPinFieldDecoration.defaultPinBoxDecoration||OtpPinFieldDecoration.underlinedPinBoxDecoration||OtpPinFieldDecoration.roundedPinBoxDecoration
+                        ///use OtpPinFieldDecoration.custom  (by using this you can make Otp_Pin_Field according to yourself like you can give fieldBorderRadius,fieldBorderWidth and etc things)
+                        otpPinFieldDecoration:
+                            OtpPinFieldDecoration.defaultPinBoxDecoration),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  RoundButton(
+                    title: 'Next',
+                    onPressed: () {
+                      FocusScope.of(context).requestFocus(FocusNode());
+                    },
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        SizedBox(height: 30),
-                        Icon(Icons.flutter_dash_outlined, size: 150),
-                        SizedBox(height: 20),
+                        Text(
+                          "Didn't receive?",
+                          style: TextStyle(
+                              color: TColor.secondaryText,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        const SizedBox(
+                          width: 4,
+                        ),
+                        Text(
+                          "Resend it",
+                          style: TextStyle(
+                            color: TColor.primary,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
                       ],
                     ),
-                    showCustomKeyboard: false,
-
-                    ///bool which manage to show custom keyboard
-                    // customKeyboard: Container(),
-                    /// Widget which help you to show your own custom keyboard in place if default custom keyboard
-                    showDefaultKeyboard: true,
-
-                    ///bool which manage to show default OS keyboard
-                    cursorWidth: 3,
-
-                    /// to select cursor width
-                    mainAxisAlignment: MainAxisAlignment.center,
-
-                    /// place otp pin field according to yourself
-
-                    /// predefine decorate of pinField use  OtpPinFieldDecoration.defaultPinBoxDecoration||OtpPinFieldDecoration.underlinedPinBoxDecoration||OtpPinFieldDecoration.roundedPinBoxDecoration
-                    ///use OtpPinFieldDecoration.custom  (by using this you can make Otp_Pin_Field according to yourself like you can give fieldBorderRadius,fieldBorderWidth and etc things)
-                    otpPinFieldDecoration:
-                        OtpPinFieldDecoration.defaultPinBoxDecoration),
+                  ),
+                ],
               ),
-              const SizedBox(
-                height: 30,
-              ),
-              RoundButton(
-                title: 'Next',
-                onPressed: () {
-                  FocusScope.of(context).requestFocus(FocusNode());
-                },
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      "Didn't receive?",
-                      style: TextStyle(
-                          color: TColor.secondaryText,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    Text(
-                      "Resend it",
-                      style: TextStyle(
-                        color: TColor.primary,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

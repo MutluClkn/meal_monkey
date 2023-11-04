@@ -16,64 +16,79 @@ class _NewPasswordViewState extends State<NewPasswordView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 25,
-            vertical: 20,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 64,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(
-                height: 64,
-              ),
-              Text(
-                'New Password',
-                style: TextStyle(
-                  color: TColor.primaryText,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Text(
-                'Please enter your email to receive a link to create a new password via email',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: TColor.secondaryText,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              RoundTextField(
-                placeHolder: 'New Password',
-                controller: passwordText,
-                obscureText: true,
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              RoundTextField(
-                placeHolder: 'Confirm Password',
-                controller: confirmPasswordText,
-                obscureText: true,
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              RoundButton(
-                title: 'Next',
-                onPressed: () {},
-              ),
-            ],
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Image.asset(
+              'assets/images/btn_back.png',
+              width: 20,
+              height: 20,
+            ),
           ),
-        ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 25,
+                vertical: 20,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'New Password',
+                    style: TextStyle(
+                      color: TColor.primaryText,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    'Please enter your email to receive a link to create a new password via email',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: TColor.secondaryText,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  RoundTextField(
+                    placeHolder: 'New Password',
+                    controller: passwordText,
+                    obscureText: true,
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  RoundTextField(
+                    placeHolder: 'Confirm Password',
+                    controller: confirmPasswordText,
+                    obscureText: true,
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  RoundButton(
+                    title: 'Next',
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
