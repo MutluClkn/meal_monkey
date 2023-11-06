@@ -40,3 +40,7 @@ samples, guidance on mobile development, and a full API reference.
 ### Menu Detail
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/menuitem1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/menuitem2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/menuitem3.png " width="222" height="430">
+
+### Menu Item Detail
+
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/itemdetail.png " width="222" height="430">
