@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/menu_item_row.dart';
-import 'package:meal_monkey/common_widget/popular_restaurants_row.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
+import 'package:meal_monkey/view/menu/item_details_view.dart';
 
 class MenuItemView extends StatefulWidget {
   final Map menuItemObj;
@@ -159,7 +159,14 @@ class _MenuItemViewState extends State<MenuItemView> {
                   var menuItemsObj = menuItemsArr[index] as Map? ?? {};
                   return MenuItemRow(
                     menuObj: menuItemsObj,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ItemDetailsView(),
+                        ),
+                      );
+                    },
                   );
                 }),
               ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
-import 'package:meal_monkey/view/login/login_view.dart';
 import 'package:meal_monkey/view/login/new_password_view.dart';
 
 class ResetPasswordView extends StatefulWidget {
