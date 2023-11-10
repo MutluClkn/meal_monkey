@@ -43,7 +43,7 @@ class RoundIconButton extends StatelessWidget {
               style: TextStyle(
                 color: textColor,
                 fontSize: 12,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ],

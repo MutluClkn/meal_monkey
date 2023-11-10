@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:meal_monkey/common/color_extension.dart';
+import 'package:meal_monkey/common_widget/round_icon_button.dart';
 
 class ItemDetailsView extends StatefulWidget {
   const ItemDetailsView({super.key});
@@ -13,6 +14,7 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
   List portionSizesArr = ['Small', 'Big'];
   List ingredientsArr = ['Chicken', 'Onion', 'Pepper', 'Corn', 'Pepperoni'];
   int qty = 1;
+  double price = 15;
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
@@ -285,7 +287,6 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
                               InkWell(
                                 onTap: () {
                                   qty += 1;
-
                                   setState(() {});
                                 },
                                 child: Container(
@@ -309,6 +310,122 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
                               ),
                             ],
                           ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Stack(
+                          alignment: Alignment.centerLeft,
+                          children: [
+                            Container(
+                              width: media.width * 0.27,
+                              height: 180,
+                              decoration: BoxDecoration(
+                                color: TColor.primary,
+                                borderRadius: const BorderRadius.only(
+                                  topRight: Radius.circular(35),
+                                  bottomRight: Radius.circular(35),
+                                ),
+                              ),
+                            ),
+                            Center(
+                              child: Stack(
+                                alignment: Alignment.centerRight,
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(
+                                      top: 8,
+                                      bottom: 8,
+                                      left: 30,
+                                      right: 20,
+                                    ),
+                                    width: media.width - 100,
+                                    height: 120,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(40),
+                                        bottomLeft: Radius.circular(40),
+                                        topRight: Radius.circular(10),
+                                        bottomRight: Radius.circular(10),
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black12,
+                                          blurRadius: 15,
+                                          offset: Offset(0, 4),
+                                        ),
+                                      ],
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'Total Price',
+                                          style: TextStyle(
+                                            color: TColor.primaryText,
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          '\$${(price * qty).toStringAsFixed(2)}',
+                                          style: TextStyle(
+                                            color: TColor.primaryText,
+                                            fontSize: 21,
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        SizedBox(
+                                          width: 150,
+                                          height: 30,
+                                          child: RoundIconButton(
+                                            onPressed: () {},
+                                            buttonText: 'Add to Cart',
+                                            containerColor: TColor.primary,
+                                            textColor: TColor.white,
+                                            iconPathName:
+                                                'assets/images/shopping_add.png',
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 45,
+                                    height: 45,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(22.5),
+                                      boxShadow: const [
+                                        BoxShadow(
+                                          color: Colors.black12,
+                                          blurRadius: 4,
+                                          offset: Offset(0, 2),
+                                        ),
+                                      ],
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Image.asset(
+                                      'assets/images/shopping_cart.png',
+                                      width: 23,
+                                      height: 23,
+                                      color: TColor.primary,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
                         ),
                       ],
                     ),
