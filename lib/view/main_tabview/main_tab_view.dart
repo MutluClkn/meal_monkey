@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/tab_button.dart';
 import 'package:meal_monkey/view/home/home_view.dart';
 import 'package:meal_monkey/view/menu/menu_view.dart';
+import 'package:meal_monkey/view/offer/offer_view.dart';
 
 class MainTabView extends StatefulWidget {
   const MainTabView({super.key});
@@ -76,7 +77,7 @@ class _MainTabViewState extends State<MainTabView> {
                   onTap: () {
                     if (selectedTab != 1) {
                       selectedTab = 1;
-                      selectPageView = Container();
+                      selectPageView = const OfferView();
                     }
                     if (mounted) {
                       setState(() {});

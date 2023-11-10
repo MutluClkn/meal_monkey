@@ -44,3 +44,7 @@ samples, guidance on mobile development, and a full API reference.
 ### Menu Item Detail
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/item_details.gif " width="222" height="430">
+
+### Offer Screen
+
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/offer_view1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/offer_view2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/offer_view3.png " width="222" height="430">
