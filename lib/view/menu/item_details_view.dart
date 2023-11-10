@@ -12,6 +12,7 @@ class ItemDetailsView extends StatefulWidget {
 class _ItemDetailsViewState extends State<ItemDetailsView> {
   List portionSizesArr = ['Small', 'Big'];
   List ingredientsArr = ['Chicken', 'Onion', 'Pepper', 'Corn', 'Pepperoni'];
+  int qty = 1;
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
@@ -229,7 +230,13 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
                               ),
                               const Spacer(),
                               InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  qty -= 1;
+                                  if (qty < 1) {
+                                    qty = 1;
+                                  }
+                                  setState(() {});
+                                },
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 20),
@@ -264,7 +271,7 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
                                   ),
                                 ),
                                 child: Text(
-                                  '2',
+                                  qty.toString(),
                                   style: TextStyle(
                                     color: TColor.primary,
                                     fontSize: 14,
@@ -276,7 +283,11 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
                                 width: 8,
                               ),
                               InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  qty += 1;
+
+                                  setState(() {});
+                                },
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 20),
