@@ -29,11 +29,11 @@ samples, guidance on mobile development, and a full API reference.
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/onboarding1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/onboarding2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/onboarding3.png " width="222" height="430">
 
-### Home Screen
+### Home Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/homeview1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/homeview2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/homeview3.png " width="222" height="430">
 
-### Menu Screen
+### Menu Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/menuview.png " width="222" height="430">
 
@@ -45,6 +45,10 @@ samples, guidance on mobile development, and a full API reference.
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/item_details.gif " width="222" height="430">
 
-### Offer Screen
+### Offer Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/offer_view1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/offer_view2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/offer_view3.png " width="222" height="430">
+
+### Profile Tab
+
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/profile.gif " width="222" height="430">

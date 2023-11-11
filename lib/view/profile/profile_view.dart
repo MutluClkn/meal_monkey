@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:meal_monkey/common/color_extension.dart';
@@ -12,7 +14,8 @@ class ProfileView extends StatefulWidget {
 }
 
 class _ProfileViewState extends State<ProfileView> {
-  final ImagePicker _picker = ImagePicker();
+  final ImagePicker picker = ImagePicker();
+  XFile? image;
 
   TextEditingController nameText = TextEditingController();
   TextEditingController emailText = TextEditingController();
@@ -63,9 +66,28 @@ class _ProfileViewState extends State<ProfileView> {
                   color: TColor.placeholder,
                   borderRadius: BorderRadius.circular(50),
                 ),
+                alignment: Alignment.center,
+                child: image != null
+                    ? ClipRRect(
+                        borderRadius: BorderRadius.circular(50),
+                        child: Image.file(
+                          File(image!.path),
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      )
+                    : Icon(
+                        Icons.person,
+                        size: 65,
+                        color: TColor.secondaryText,
+                      ),
               ),
               TextButton.icon(
-                onPressed: () {},
+                onPressed: () async {
+                  image = await picker.pickImage(source: ImageSource.gallery);
+                  setState(() {});
+                },
                 icon: Icon(
                   Icons.edit,
                   color: TColor.primary,
