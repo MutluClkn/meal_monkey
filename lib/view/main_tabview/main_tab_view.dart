@@ -4,6 +4,7 @@ import 'package:meal_monkey/common_widget/tab_button.dart';
 import 'package:meal_monkey/view/home/home_view.dart';
 import 'package:meal_monkey/view/menu/menu_view.dart';
 import 'package:meal_monkey/view/offer/offer_view.dart';
+import 'package:meal_monkey/view/profile/profile_view.dart';
 
 class MainTabView extends StatefulWidget {
   const MainTabView({super.key});
@@ -95,7 +96,7 @@ class _MainTabViewState extends State<MainTabView> {
                   onTap: () {
                     if (selectedTab != 3) {
                       selectedTab = 3;
-                      selectPageView = Container();
+                      selectPageView = const ProfileView();
                     }
                     if (mounted) {
                       setState(() {});
