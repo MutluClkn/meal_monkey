@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/tab_button.dart';
 import 'package:meal_monkey/view/home/home_view.dart';
 import 'package:meal_monkey/view/menu/menu_view.dart';
+import 'package:meal_monkey/view/more/more_view.dart';
 import 'package:meal_monkey/view/offer/offer_view.dart';
 import 'package:meal_monkey/view/profile/profile_view.dart';
 
@@ -110,7 +111,7 @@ class _MainTabViewState extends State<MainTabView> {
                   onTap: () {
                     if (selectedTab != 4) {
                       selectedTab = 4;
-                      selectPageView = Container();
+                      selectPageView = const MoreView();
                     }
                     if (mounted) {
                       setState(() {});

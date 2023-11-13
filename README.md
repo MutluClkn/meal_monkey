@@ -52,3 +52,7 @@ samples, guidance on mobile development, and a full API reference.
 ### Profile Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/profile.gif " width="222" height="430">
+
+### More Tab
+
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/more.png " width="222" height="430">
