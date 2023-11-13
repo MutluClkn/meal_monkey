@@ -112,7 +112,7 @@ class _MenuItemViewState extends State<MenuItemView> {
                       widget.menuItemObj['name'].toString(),
                       style: TextStyle(
                         color: TColor.primaryText,
-                        fontSize: 22,
+                        fontSize: 23,
                         fontWeight: FontWeight.w800,
                       ),
                     ),

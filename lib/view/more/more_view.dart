@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
+import 'package:meal_monkey/view/more/payment_details.dart';
 
 class MoreView extends StatefulWidget {
   const MoreView({super.key});
@@ -86,7 +87,12 @@ class _MoreViewState extends State<MoreView> {
                   var moreObj = moreArr[index] as Map? ?? {};
                   var countBase = moreObj['base'] as int? ?? 0;
                   return InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PaymentDetails()));
+                    },
                     child: Container(
                       margin: const EdgeInsets.symmetric(
                           vertical: 8, horizontal: 20),

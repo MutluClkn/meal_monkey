@@ -56,3 +56,7 @@ samples, guidance on mobile development, and a full API reference.
 ### More Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/more.png " width="222" height="430">
+
+### Payment Details Screen
+
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/payment_details.png " width="222" height="430">

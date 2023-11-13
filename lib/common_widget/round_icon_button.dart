@@ -6,6 +6,8 @@ class RoundIconButton extends StatelessWidget {
   final Color containerColor;
   final Color textColor;
   final String iconPathName;
+  final double fontSize;
+  final FontWeight fontWeight;
 
   const RoundIconButton(
       {super.key,
@@ -13,7 +15,9 @@ class RoundIconButton extends StatelessWidget {
       required this.buttonText,
       required this.containerColor,
       required this.textColor,
-      required this.iconPathName});
+      required this.iconPathName,
+      this.fontSize = 12,
+      this.fontWeight = FontWeight.w700});
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +46,8 @@ class RoundIconButton extends StatelessWidget {
               buttonText,
               style: TextStyle(
                 color: textColor,
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
+                fontSize: fontSize,
+                fontWeight: fontWeight,
               ),
             ),
           ],
