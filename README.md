@@ -61,6 +61,6 @@ samples, guidance on mobile development, and a full API reference.
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/payment_details.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/addcard.png " width="222" height="430">
 
-### Notifications Screen & About Us
+### Notifications Screen & About Us & Inbox
 
-<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/notificationsview.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/aboutus.png " width="222" height="430">
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/notificationsview.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/aboutus.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/inbox.png " width="222" height="430">
