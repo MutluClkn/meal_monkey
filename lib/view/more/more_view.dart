@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
+import 'package:meal_monkey/view/more/notifications_view.dart';
 import 'package:meal_monkey/view/more/payment_details.dart';
 
 class MoreView extends StatefulWidget {
@@ -88,10 +89,23 @@ class _MoreViewState extends State<MoreView> {
                   var countBase = moreObj['base'] as int? ?? 0;
                   return InkWell(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const PaymentDetails()));
+                      switch (moreObj['index'].toString()) {
+                        case '1':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const PaymentDetails()));
+                          break;
+                        case '3':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const NotificationsView()));
+                          break;
+                        default:
+                      }
                     },
                     child: Container(
                       margin: const EdgeInsets.symmetric(

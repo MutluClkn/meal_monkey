@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/common_widget/round_icon_button.dart';
+import 'package:meal_monkey/view/more/add_card_view.dart';
 
 class PaymentDetails extends StatefulWidget {
   const PaymentDetails({super.key});
@@ -214,12 +215,20 @@ class _PaymentDetailsState extends State<PaymentDetails> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: RoundIconButton(
-                  onPressed: () {},
                   buttonText: 'Add Another Credit/Debit Card',
                   fontSize: 14,
                   containerColor: TColor.primary,
                   textColor: TColor.white,
                   iconPathName: 'assets/images/add.png',
+                  onPressed: () {
+                    showModalBottomSheet(
+                        isScrollControlled: true,
+                        backgroundColor: Colors.transparent,
+                        context: context,
+                        builder: (context) {
+                          return const AddCardView();
+                        });
+                  },
                 ),
               ),
             ],

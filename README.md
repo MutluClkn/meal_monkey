@@ -15,25 +15,25 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## App
+# App
 
-### Welcome
+## Welcome
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/startup.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/welcome.png " width="222" height="430">
 
-### Login and Sign Up
+## Login and Sign Up
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/login.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/signup.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/resetpassview.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/newpassview.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/otpscreen.png " width="222" height="430">
 
-### Onboarding
+## Onboarding
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/onboarding1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/onboarding2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/onboarding3.png " width="222" height="430">
 
-### Home Tab
+## Home Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/homeview1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/homeview2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/homeview3.png " width="222" height="430">
 
-### Menu Tab
+## Menu Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/menuview.png " width="222" height="430">
 
@@ -45,18 +45,22 @@ samples, guidance on mobile development, and a full API reference.
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/item_details.gif " width="222" height="430">
 
-### Offer Tab
+## Offer Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/offer_view1.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/offer_view2.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/offer_view3.png " width="222" height="430">
 
-### Profile Tab
+## Profile Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/profile.gif " width="222" height="430">
 
-### More Tab
+## More Tab
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/more.png " width="222" height="430">
 
 ### Payment Details Screen
 
-<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/payment_details.png " width="222" height="430">
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/payment_details.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/addcard.png " width="222" height="430">
+
+### Notifications Screen
+
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/notificationsview.png " width="222" height="430">
