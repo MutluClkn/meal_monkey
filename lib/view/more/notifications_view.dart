@@ -108,7 +108,6 @@ class _NotificationsViewState extends State<NotificationsView> {
                 itemBuilder: ((context, index) {
                   var notificationObj = notificationArr[index] as Map? ?? {};
                   return Container(
-                    decoration: BoxDecoration(),
                     padding: const EdgeInsets.symmetric(
                       vertical: 15,
                       horizontal: 25,
@@ -126,29 +125,31 @@ class _NotificationsViewState extends State<NotificationsView> {
                         const SizedBox(
                           width: 15,
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              notificationObj["title"].toString(),
-                              style: TextStyle(
-                                color: TColor.primaryText,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                notificationObj["title"].toString(),
+                                style: TextStyle(
+                                  color: TColor.primaryText,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 4,
-                            ),
-                            Text(
-                              notificationObj["time"].toString(),
-                              style: TextStyle(
-                                color: TColor.secondaryText,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600,
+                              const SizedBox(
+                                height: 4,
                               ),
-                            )
-                          ],
+                              Text(
+                                notificationObj["time"].toString(),
+                                style: TextStyle(
+                                  color: TColor.secondaryText,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
+import 'package:meal_monkey/view/more/about_us_view.dart';
 import 'package:meal_monkey/view/more/notifications_view.dart';
 import 'package:meal_monkey/view/more/payment_details.dart';
 
@@ -103,6 +104,12 @@ class _MoreViewState extends State<MoreView> {
                               MaterialPageRoute(
                                   builder: (context) =>
                                       const NotificationsView()));
+                          break;
+                        case '5':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const AboutUsView()));
                           break;
                         default:
                       }
