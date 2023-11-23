@@ -64,3 +64,10 @@ samples, guidance on mobile development, and a full API reference.
 ### My Orders & Notifications Screen & About Us & Inbox
 
 <img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/myorders.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/notificationsview.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/aboutus.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/inbox.png " width="222" height="430">
+
+### Checkout & Add Card & Change Address
+
+<img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/checkout.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/checkoutaddcard.png " width="222" height="430"><img src="https://github.com/MutluClkn/meal_monkey/blob/main/documents/changeaddress.png " width="222" height="430">
+
+
+

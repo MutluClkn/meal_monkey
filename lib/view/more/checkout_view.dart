@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/view/more/add_card_view.dart';
+import 'package:meal_monkey/view/more/change_address_view.dart';
 
 class CheckoutView extends StatefulWidget {
   const CheckoutView({super.key});
@@ -17,7 +18,7 @@ class _CheckoutViewState extends State<CheckoutView> {
     {"name": "**** **** **** 2187", "icon": "assets/images/visa_icon.png"},
     {"name": "test@gmail.com", "icon": "assets/images/paypal.png"},
   ];
-  int selectedMethod = -1;
+  int selectedMethod = 0;
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
@@ -99,7 +100,13 @@ class _CheckoutViewState extends State<CheckoutView> {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ChangeAddressView()));
+                          },
                           child: Text(
                             'Change',
                             style: TextStyle(
