@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
+import 'package:meal_monkey/view/more/checkout_view.dart';
 
 class MyOrdersView extends StatefulWidget {
   const MyOrdersView({super.key});
@@ -364,7 +365,12 @@ class _MyOrdersViewState extends State<MyOrdersView> {
                     ),
                     RoundButton(
                       title: 'Checkout',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CheckoutView()));
+                      },
                     ),
                     const SizedBox(
                       height: 20,
