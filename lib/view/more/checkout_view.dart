@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/view/more/add_card_view.dart';
 import 'package:meal_monkey/view/more/change_address_view.dart';
+import 'package:meal_monkey/view/more/checkout_message_view.dart';
 
 class CheckoutView extends StatefulWidget {
   const CheckoutView({super.key});
@@ -353,7 +354,17 @@ class _CheckoutViewState extends State<CheckoutView> {
                   vertical: 20,
                   horizontal: 25,
                 ),
-                child: RoundButton(title: 'Send Order', onPressed: () {}),
+                child: RoundButton(
+                    title: 'Send Order',
+                    onPressed: () {
+                      showModalBottomSheet(
+                          context: context,
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          builder: (context) {
+                            return const CheckoutMessageView();
+                          });
+                    }),
               ),
             ],
           ),

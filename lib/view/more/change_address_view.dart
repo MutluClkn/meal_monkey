@@ -25,7 +25,6 @@ class _ChangeAddressViewState extends State<ChangeAddressView> {
   static const CameraPosition _kLake = CameraPosition(
       bearing: 192.8334901395799,
       target: LatLng(37.42796133580664, -122.085749655962),
-      // tilt: 59.440717697143555,
       zoom: 14.151926040649414);
 
   @override
@@ -80,7 +79,6 @@ class _ChangeAddressViewState extends State<ChangeAddressView> {
         ),
       ),
       body: CustomGoogleMapMarkerBuilder(
-        //screenshotDelay: const Duration(seconds: 4),
         customMarkers: _customMarkers,
         builder: (BuildContext context, Set<Marker>? markers) {
           if (markers == null) {
