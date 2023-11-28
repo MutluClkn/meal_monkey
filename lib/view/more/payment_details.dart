@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/common_widget/round_icon_button.dart';
 import 'package:meal_monkey/view/more/add_card_view.dart';
+import 'package:meal_monkey/view/more/my_orders_view.dart';
 
 class PaymentDetails extends StatefulWidget {
   const PaymentDetails({super.key});
@@ -50,16 +51,24 @@ class _PaymentDetailsState extends State<PaymentDetails> {
                       'Payment Details',
                       style: TextStyle(
                         color: TColor.primaryText,
-                        fontSize: 23,
+                        fontSize: 22,
                         fontWeight: FontWeight.w800,
                       ),
                     ),
                     const Spacer(),
-                    Image.asset(
-                      'assets/images/shopping_cart.png',
-                      width: 25,
-                      height: 25,
-                    ),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MyOrdersView()));
+                      },
+                      icon: Image.asset(
+                        'assets/images/shopping_cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
+                    )
                   ],
                 ),
               ),

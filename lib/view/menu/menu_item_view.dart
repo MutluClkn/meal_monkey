@@ -3,6 +3,7 @@ import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/menu_item_row.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
 import 'package:meal_monkey/view/menu/item_details_view.dart';
+import 'package:meal_monkey/view/more/my_orders_view.dart';
 
 class MenuItemView extends StatefulWidget {
   final Map menuItemObj;
@@ -118,7 +119,12 @@ class _MenuItemViewState extends State<MenuItemView> {
                     ),
                     const Spacer(),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MyOrdersView()));
+                      },
                       icon: Image.asset(
                         'assets/images/shopping_cart.png',
                         width: 25,

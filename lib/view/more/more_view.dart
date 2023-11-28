@@ -71,10 +71,18 @@ class _MoreViewState extends State<MoreView> {
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-                    Image.asset(
-                      'assets/images/shopping_cart.png',
-                      width: 25,
-                      height: 25,
+                    IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MyOrdersView()));
+                      },
+                      icon: Image.asset(
+                        'assets/images/shopping_cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
                     ),
                   ],
                 ),

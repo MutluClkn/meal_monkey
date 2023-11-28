@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
 import 'package:meal_monkey/common_widget/round_title_textfield.dart';
+import 'package:meal_monkey/view/more/my_orders_view.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -48,10 +49,18 @@ class _ProfileViewState extends State<ProfileView> {
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-                    Image.asset(
-                      'assets/images/shopping_cart.png',
-                      width: 25,
-                      height: 25,
+                    IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MyOrdersView()));
+                      },
+                      icon: Image.asset(
+                        'assets/images/shopping_cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
                     ),
                   ],
                 ),

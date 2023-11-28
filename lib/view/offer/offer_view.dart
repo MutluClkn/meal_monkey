@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/popular_restaurants_row.dart';
 import 'package:meal_monkey/common_widget/round_button.dart';
+import 'package:meal_monkey/view/more/my_orders_view.dart';
 
 class OfferView extends StatefulWidget {
   const OfferView({super.key});
@@ -91,7 +92,12 @@ class _OfferViewState extends State<OfferView> {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MyOrdersView()));
+                      },
                       icon: Image.asset(
                         'assets/images/shopping_cart.png',
                         width: 25,

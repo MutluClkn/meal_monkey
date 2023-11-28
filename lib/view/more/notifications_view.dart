@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/common/color_extension.dart';
+import 'package:meal_monkey/view/more/my_orders_view.dart';
 
 class NotificationsView extends StatefulWidget {
   const NotificationsView({super.key});
@@ -81,7 +82,12 @@ class _NotificationsViewState extends State<NotificationsView> {
                     ),
                     const Spacer(),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MyOrdersView()));
+                      },
                       icon: Image.asset(
                         'assets/images/shopping_cart.png',
                         width: 25,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:meal_monkey/common/color_extension.dart';
 import 'package:meal_monkey/common_widget/round_icon_button.dart';
+import 'package:meal_monkey/view/more/my_orders_view.dart';
 
 class ItemDetailsView extends StatefulWidget {
   const ItemDetailsView({super.key});
@@ -498,7 +499,12 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const MyOrdersView()));
+                        },
                         icon: Image.asset(
                           'assets/images/shopping_cart.png',
                           width: 25,
