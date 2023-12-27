@@ -6,6 +6,7 @@ import 'package:meal_monkey/common_widget/popular_restaurants_row.dart';
 import 'package:meal_monkey/common_widget/recent_restaurants_row.dart';
 import 'package:meal_monkey/common_widget/round_textfield.dart';
 import 'package:meal_monkey/common_widget/view_all_title_row.dart';
+import 'package:meal_monkey/view/more/my_orders_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -124,7 +125,12 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MyOrdersView()));
+                      },
                       icon: Image.asset(
                         'assets/images/shopping_cart.png',
                         width: 25,

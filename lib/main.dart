@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey/view/home/home_view.dart';
-import 'package:meal_monkey/view/main_tabview/main_tab_view.dart';
 import 'package:meal_monkey/view/on_boarding/startup_view.dart';
 
 void main() {
@@ -20,8 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         //useMaterial3: true,
       ),
-      home: const MainTabView(),
-      //home: const StartupView(),
+      home: const StartupView(),
     );
   }
 }
